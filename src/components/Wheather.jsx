@@ -72,6 +72,13 @@ const Weather = () => {
           placeholder="Enter city"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+        onKeyDown={(e)=>{
+          if(e.key === "Enter")
+          {
+            console.log("done")
+            search(city)
+          }
+        }}
         />
         <div
           className="cursor-pointer bg-white rounded-full p-1"
